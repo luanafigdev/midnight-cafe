@@ -1,0 +1,11 @@
+import { cp, mkdir, rm } from 'node:fs/promises';
+import { resolve, join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const output=join(root,'dist');
+await rm(output,{recursive:true,force:true});
+await mkdir(output,{recursive:true});
+await cp(join(root,'index.html'),join(output,'index.html'));
+await cp(join(root,'src'),join(output,'src'),{recursive:true});
+await cp(join(root,'public'),output,{recursive:true});
+console.log(`Midnight Café pronto para publicação: ${output}`);
