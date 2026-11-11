@@ -3,11 +3,6 @@
 Um jogo narrativo de cafeteria encantada. Prepare bebidas, administre o café e descubra as histórias que só aparecem depois da meia-noite.
 
 
-## Publicação
-
-O projeto utiliza JavaScript nativo e não exige bibliotecas externas. O comando `npm run build` prepara o site estático na pasta `dist`.
-
-No Netlify, conecte o repositório GitHub. O projeto inclui `netlify.toml` com os comandos de build (`npm run build`) e publicação (`dist`).
 
 ## Mecânicas
 
